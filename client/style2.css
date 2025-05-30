@@ -1,0 +1,311 @@
+        :root {
+            --primary: #3d6660;
+            --secondary: #f5f5dc;
+            --accent: #e67e22;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        .info {
+            background-color: #3d6660;
+            padding: 5px 50px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 4px 8px rgba(5, 77, 47, 0.1);
+            margin: 10px;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .reseauSociaux a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .reseauSociaux a:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info p {
+    font-size: 12px;
+    color:#ffffff;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.info p i {
+    margin-right: 8px;
+}
+
+.reseauSociaux {
+    margin-top: 1px;
+    font-size: 12px;
+    display: flex; 
+    align-items: center;
+}
+
+.reseauSociaux a {
+    text-decoration: none;
+    color: #ffff; 
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    
+}
+
+.reseauSociaux a:hover {
+    color: #f44336; 
+}
+
+.fas, .fab {
+    margin-right: 10px;
+}
+
+.reseauSociaux a i {
+    font-size: 15px;
+    transition: transform 0.3s ease;
+    
+}
+.reseauSociaux a:hover i {
+    transform: scale(1.2);
+}
+        
+        /* Style des cartes de plats */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .plat-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .plat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .card-price {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            margin: 0 0 10px;
+            color: var(--primary);
+        }
+        
+        .card-text {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px;
+        }
+        
+        .quantity-input {
+            width: 50px;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .btn-add {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+          
+        }
+        
+        .btn-add:hover {
+            background: #2d4d48;
+        }
+        
+        /* Panier latéral */
+        .panier-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            transform: translateX(100%);
+            transition: transform 0.3s;
+            z-index: 1000;
+        }
+        
+        .panier-container.open {
+            transform: translateX(0);
+        }
+        
+        .panier-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .close-panier {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .panier-items {
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .panier-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .item-details {
+            flex-grow: 1;
+        }
+        
+        .item-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn-remove {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .panier-total {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 2px solid var(--primary);
+        }
+        
+        .btn-commander {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+       
+        }
+        
+        .btn-commander:hover {
+            background: #d35400;
+        }
+        
+        /* Bouton panier flottant */
+        .btn-panier {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+        
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--accent);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .panier-container {
+                width: 100%;
+            }
+        }
+   

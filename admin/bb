@@ -1,0 +1,15 @@
+function updateGallery() {
+    const item = items[currentIndex];
+    const galleryCenter = gallery.offsetWidth / 2;
+    const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+    const newScrollLeft = itemCenter - galleryCenter;
+
+    gallery.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+    });
+
+    items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentIndex);
+    });
+}
