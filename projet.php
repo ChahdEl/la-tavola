@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="client/style.css">
     <title>La tavola</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
         </div>  
     </div>
     <div class="menu-container">
-        <img src="images\logo.png" alt="images-removebg-preview.png">
+        <img src="client/images\logo.png" alt="images-removebg-preview.png">
         <a href="https://drive.google.com/file/d/1Y8r1DQLjJXhFySvNwzhqvceUiSiVONfU/view?fbclid=PAZXh0bgNhZW0CMTEAAaZCJLOyGHd-2HstLTprkteqfsq4W52nqERgsxZdGKT-nzeHcop0Prbscf0_aem_7ZUllV3Aguq520tVEfWnSw" id="carte"> <i class="fas fa-bars menu-icon"></i>Menu</a>
         <form action="client/reservation.php" method="POST">
             <button type="submit" name="page"><i class="fas fa-calendar calendar-icon"></i> Réserver</button>
